@@ -169,7 +169,7 @@ catalina_sh() {
 	if [ ! -f "$CATALINA_BASE"/logs/catalina.out ]; then
 		install -o $TOMCAT8_USER -g adm -m 644 /dev/null "$CATALINA_BASE"/logs/catalina.out
 	fi
-	install -o $TOMCAT8_USER -g adm -m 644 /dev/null "$CATALINA_PID"
+	#install -o $TOMCAT8_USER -g adm -m 644 /dev/null "$CATALINA_PID"
 
 	cd $CATALINA_BASE 
 	JAVA_HOME=$JAVA_HOME CATALINA_HOME=$CATALINA_HOME CATALINA_BASE=$CATALINA_BASE JAVA_OPTS="$JAVA_OPTS" CATALINA_PID=$CATALINA_PID CATALINA_TMPDIR=$CATALINA_TMPDIR LANG=$LANG JSSE_HOME=$JSSE_HOME $CATALINA_SH $@
